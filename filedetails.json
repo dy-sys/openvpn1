@@ -3,14 +3,11 @@
     {"id":0,"file":"
 
 client
-proto udp
 dev tun
-remote 192.168.19.130 1194
+remote 192.168.19.130 1194 udp
 remote-cert-tls server
 resolv-retry infinite
 nobind
-persist-key
-persist-tun
 verb 3
 auth-nocache
 

@@ -1,15 +1,11 @@
 {
   "ovpn_file":[
     {"id":0,"file":"
-
-client
+proto udp
 dev tun
-remote 192.168.19.130 1194 udp
-remote-cert-tls server
-resolv-retry infinite
-nobind
-verb 3
-auth-nocache
+remote 192.168.19.130 1194
+cipher AES-256-CBC
+compress lz4-v2
 
 <ca>
 -----BEGIN CERTIFICATE-----
@@ -34,6 +30,70 @@ moEVivfGZMU6G+sPaB+CYmpRf7qw9Et4zfZpzQZwjHbrUQ==
 </ca>
 
 <cert>
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            78:71:90:b2:88:5b:9f:2e:0e:03:6e:55:1c:74:61:f5
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=dell
+        Validity
+            Not Before: Oct 25 09:44:09 2021 GMT
+            Not After : Jan 28 09:44:09 2024 GMT
+        Subject: CN=dy
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:ba:10:a1:02:bc:9d:04:2c:14:28:d3:aa:b6:e4:
+                    a3:55:ce:75:f3:ce:66:d6:43:1b:cc:bb:ff:dd:f7:
+                    78:86:4d:38:79:f0:46:12:7b:39:c9:2e:8f:df:76:
+                    f9:95:77:bc:26:90:44:ce:07:b4:30:dc:82:e7:e8:
+                    db:0b:34:4d:3b:77:df:e1:11:d3:80:02:1e:d5:fa:
+                    b9:82:80:cc:a4:15:e7:77:db:36:33:9d:98:c0:ab:
+                    69:22:3f:8f:8b:ed:0a:a1:f7:dc:cb:7a:74:2d:84:
+                    f2:91:49:70:37:5a:51:15:27:6a:05:c0:35:67:88:
+                    cf:ca:fe:bd:9d:21:5a:20:05:2f:f5:51:6b:10:59:
+                    b7:07:31:1f:40:d7:79:8e:16:11:f1:bf:e7:80:b4:
+                    1d:50:8b:5c:13:8e:ac:51:18:14:2d:74:83:28:8f:
+                    c8:bf:58:eb:0c:4d:f9:fb:f3:32:b4:d0:32:ec:59:
+                    43:37:1d:2b:4d:3f:4d:6f:4f:ba:a5:7c:ab:92:de:
+                    37:dc:60:99:d1:e1:4f:4a:77:f6:d5:1a:ed:69:73:
+                    64:b5:3c:9a:1e:59:a9:a3:85:39:37:a0:f2:c0:05:
+                    36:9c:9d:1b:6d:bb:a9:46:67:48:d7:a2:ce:7b:c9:
+                    90:73:fe:ae:78:c1:60:7a:08:ee:26:d9:c6:3f:9c:
+                    03:33
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                1C:72:E7:74:79:07:66:16:73:B5:78:5D:F4:58:33:C8:AF:E8:FE:2F
+            X509v3 Authority Key Identifier: 
+                keyid:15:4F:22:53:52:4C:AC:D6:C0:8D:AA:E2:61:76:5A:A3:42:D9:A2:76
+                DirName:/CN=dell
+                serial:C6:E2:72:E4:B2:83:9E:DA
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha256WithRSAEncryption
+         a2:9b:67:2f:1c:f5:5d:aa:73:22:52:db:f6:61:5c:99:36:94:
+         c1:9e:4e:76:b7:b9:ec:1c:9a:d5:f2:14:bd:2e:be:33:1d:1d:
+         c3:89:1d:7a:af:46:cb:b7:c7:20:98:1e:6d:b5:ff:f2:9e:8a:
+         9d:3a:43:6e:1e:65:6b:f3:3b:fd:85:eb:e7:d3:3a:11:f6:42:
+         1f:7d:75:30:48:1b:76:89:6e:09:9d:12:db:37:38:74:23:1b:
+         64:dd:c0:de:99:0c:88:7e:ce:3f:0e:af:d1:8b:f2:49:92:de:
+         e3:2f:e1:05:a9:8f:e7:53:ff:16:9a:b2:bb:50:82:e3:17:6e:
+         fe:39:61:52:60:bd:82:24:7d:62:b6:46:16:a0:ab:91:9c:50:
+         98:d1:24:40:42:c5:1e:92:49:3f:7d:a4:ab:c5:00:3a:0c:5b:
+         30:bc:51:31:4c:b8:72:07:3b:04:9a:e0:0c:16:e1:fd:3b:93:
+         df:60:31:ff:95:1d:02:a5:16:4c:8f:0a:63:b3:a2:59:ed:47:
+         fb:c7:b6:e7:5d:fc:cc:96:40:cc:00:60:e0:61:ec:70:14:65:
+         79:16:90:9c:a5:af:be:8f:81:c2:f4:f0:03:7a:5e:4a:26:00:
+         19:f4:92:26:5b:87:76:4b:d3:1f:fa:c0:3a:4b:e8:27:5c:5e:
+         77:74:07:ad
 -----BEGIN CERTIFICATE-----
 MIIDNzCCAh+gAwIBAgIQeHGQsohbny4OA25VHHRh9TANBgkqhkiG9w0BAQsFADAP
 MQ0wCwYDVQQDDARkZWxsMB4XDTIxMTAyNTA5NDQwOVoXDTI0MDEyODA5NDQwOVow
@@ -86,7 +146,6 @@ BCKwb6ISG/xv/L+2eOcyTNqMr/u9ovsq4SOEUh561dTVy9vh32q7cf+a5ZF/GyNN
 bQfONFfPpfLZM7kGfFDKISo=
 -----END PRIVATE KEY-----
 </key>
-     
 key-direction 1
 
 <tls-auth>
@@ -109,5 +168,15 @@ b99791390a80d6a011d0c925c542e236
 894fd64a6b28cc9dbb11b292795dc6f3
 -----END OpenVPN Static key V1-----
 </tls-auth>
+ 
+remote-cert-tls server
+
+client
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+verb 3
+auth-nocache
      "}]
 }

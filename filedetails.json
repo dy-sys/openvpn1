@@ -1,9 +1,18 @@
 {
   "ovpn_file":[
     {"id":0,"file":"
+
+client
 proto udp
 dev tun
 remote 192.168.19.130 1194
+remote-cert-tls server
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+verb 3
+auth-nocache
 
 <ca>
 -----BEGIN CERTIFICATE-----
@@ -80,6 +89,7 @@ BCKwb6ISG/xv/L+2eOcyTNqMr/u9ovsq4SOEUh561dTVy9vh32q7cf+a5ZF/GyNN
 bQfONFfPpfLZM7kGfFDKISo=
 -----END PRIVATE KEY-----
 </key>
+     
 key-direction 1
 
 <tls-auth>
@@ -102,14 +112,5 @@ b99791390a80d6a011d0c925c542e236
 894fd64a6b28cc9dbb11b292795dc6f3
 -----END OpenVPN Static key V1-----
 </tls-auth>
-
-remote-cert-tls server
-
-client
-resolv-retry infinite
-nobind
-persist-key
-persist-tun
-verb 3
-auth-nocache"}]
+     "}]
 }
